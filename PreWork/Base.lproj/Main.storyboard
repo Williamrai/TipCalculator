@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PreWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much tip you want to give?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emi-pH-b4N">
+                                <rect key="frame" x="44" y="183.5" width="242" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2is-L3-ASw">
+                                <rect key="frame" x="44" y="209.5" width="335" height="32"/>
+                                <segments>
+                                    <segment title="10%"/>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="UZH-ZX-eaG"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGv-x0-1Y0" userLabel="TipView">
+                                <rect key="frame" x="44" y="298" width="338" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ds-ik-RrV">
+                                        <rect key="frame" x="8" y="15" width="24" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jle-RK-yil">
+                                        <rect key="frame" x="188" y="14" width="130" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94826068300189392" green="0.88195065816351315" blue="0.90079629840163933" alpha="0.69803921568627447" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tb2-Xt-kQE" userLabel="AmountTextFieldView">
+                                <rect key="frame" x="44" y="124" width="340" height="39"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57f-hs-cPS">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.84276219860000001" blue="0.85755834139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="$">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" 0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mlt-gu-Q0u">
+                                        <rect key="frame" x="41" y="0.0" width="299" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.96705466510000004" green="0.92871040110000003" blue="0.93863695859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="light"/>
+                                        <connections>
+                                            <action selector="onTexFieldValuePressed:" destination="BYZ-38-t0r" eventType="editingChanged" id="6a3-ke-tEh"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.88910930020000001" blue="0.85675145559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-9t-lK9">
+                                <rect key="frame" x="44" y="104" width="91" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkL-wi-60s" userLabel="TotalView">
+                                <rect key="frame" x="43" y="423" width="340" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGU-CB-h5g" userLabel="Split Amount Label">
+                                        <rect key="frame" x="8" y="12" width="142" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM9-gK-Yfq">
+                                        <rect key="frame" x="187" y="9" width="130" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96705466510000004" green="0.92871040110000003" blue="0.93863695859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PB8-qE-BCv" userLabel="SplitView">
+                                <rect key="frame" x="43" y="360" width="340" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tR1-e7-17n" userLabel="Split Amount Label">
+                                        <rect key="frame" x="9" y="12" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lc-Ef-TNl">
+                                        <rect key="frame" x="235" y="0.0" width="30" height="49"/>
+                                        <color key="backgroundColor" red="1" green="0.84276219860000001" blue="0.85755834139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addPerson:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCW-hf-iqL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyY-lL-3PD">
+                                        <rect key="frame" x="310" y="0.0" width="30" height="49"/>
+                                        <color key="backgroundColor" red="1" green="0.84276219860000001" blue="0.85755834139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="removePerson:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uby-FT-jdY"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4D-wQ-dpM">
+                                        <rect key="frame" x="277" y="7" width="15.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96705466510000004" green="0.92871040110000003" blue="0.93863695859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="f4D-wQ-dpM" firstAttribute="leading" secondItem="3lc-Ef-TNl" secondAttribute="trailing" constant="12" id="2oD-oo-Za7"/>
+                                    <constraint firstAttribute="bottom" secondItem="tR1-e7-17n" secondAttribute="bottom" constant="16" id="91L-zZ-SPU"/>
+                                    <constraint firstAttribute="bottom" secondItem="f4D-wQ-dpM" secondAttribute="bottom" constant="8" id="Ct1-l5-Ftq"/>
+                                    <constraint firstItem="cyY-lL-3PD" firstAttribute="top" secondItem="PB8-qE-BCv" secondAttribute="top" id="OY0-Ct-ABm"/>
+                                    <constraint firstItem="tR1-e7-17n" firstAttribute="leading" secondItem="PB8-qE-BCv" secondAttribute="leading" constant="9" id="S5f-2f-7Bw"/>
+                                    <constraint firstAttribute="bottom" secondItem="3lc-Ef-TNl" secondAttribute="bottom" id="UW1-j5-vD0"/>
+                                    <constraint firstItem="f4D-wQ-dpM" firstAttribute="top" secondItem="PB8-qE-BCv" secondAttribute="top" constant="7" id="Um2-CA-HC2"/>
+                                    <constraint firstItem="3lc-Ef-TNl" firstAttribute="top" secondItem="PB8-qE-BCv" secondAttribute="top" id="ZGE-ot-58A"/>
+                                    <constraint firstItem="tR1-e7-17n" firstAttribute="top" secondItem="PB8-qE-BCv" secondAttribute="top" constant="12" id="ag2-Kh-k7V"/>
+                                    <constraint firstAttribute="trailing" secondItem="cyY-lL-3PD" secondAttribute="trailing" id="cO2-r9-G66"/>
+                                    <constraint firstAttribute="bottom" secondItem="cyY-lL-3PD" secondAttribute="bottom" id="olH-oQ-iZt"/>
+                                    <constraint firstItem="3lc-Ef-TNl" firstAttribute="leading" secondItem="tR1-e7-17n" secondAttribute="trailing" constant="165" id="yUJ-OD-Zs2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PGv-x0-1Y0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="0GW-9D-xaV"/>
+                            <constraint firstItem="Tb2-Xt-kQE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="0jA-ne-Rll"/>
+                            <constraint firstItem="PB8-qE-BCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="6y4-nx-33i"/>
+                            <constraint firstItem="6Oh-9t-lK9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="9KT-2P-qXW"/>
+                            <constraint firstItem="PB8-qE-BCv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="316" id="C71-iQ-zfZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PGv-x0-1Y0" secondAttribute="bottom" constant="515" id="F47-yJ-9tz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Emi-pH-b4N" secondAttribute="trailing" constant="128" id="I5P-eY-Ibt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tb2-Xt-kQE" secondAttribute="trailing" constant="30" id="J2f-l0-WMJ"/>
+                            <constraint firstItem="2is-L3-ASw" firstAttribute="top" secondItem="Emi-pH-b4N" secondAttribute="bottom" constant="8" id="JjP-cK-Sg6"/>
+                            <constraint firstItem="6Oh-9t-lK9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="LLw-Mu-zxG"/>
+                            <constraint firstItem="Tb2-Xt-kQE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="Nwo-KM-QEQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qkL-wi-60s" secondAttribute="trailing" constant="31" id="OhD-Eu-Ho3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2is-L3-ASw" secondAttribute="trailing" constant="35" id="RUw-lB-aNe"/>
+                            <constraint firstItem="qkL-wi-60s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="YTx-2B-hua"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PGv-x0-1Y0" secondAttribute="trailing" constant="32" id="a7g-oO-uJs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qkL-wi-60s" secondAttribute="bottom" constant="390" id="cJ0-mD-nYs"/>
+                            <constraint firstItem="Emi-pH-b4N" firstAttribute="top" secondItem="Tb2-Xt-kQE" secondAttribute="bottom" constant="20.5" id="cvP-7J-suz"/>
+                            <constraint firstItem="qkL-wi-60s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="379" id="fMZ-e0-Xcu"/>
+                            <constraint firstItem="PGv-x0-1Y0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="254" id="hrV-rm-eRm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Oh-9t-lK9" secondAttribute="trailing" constant="279" id="l77-c9-1mp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PB8-qE-BCv" secondAttribute="trailing" constant="31" id="lHl-Vl-1tv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tb2-Xt-kQE" secondAttribute="bottom" constant="699" id="paY-fy-pq3"/>
+                            <constraint firstItem="2is-L3-ASw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="rhc-oB-guE"/>
+                            <constraint firstItem="Emi-pH-b4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="tiA-me-faX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PB8-qE-BCv" secondAttribute="bottom" constant="453" id="yTi-6R-xfi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addSplit" destination="3lc-Ef-TNl" id="mds-FK-VaC"/>
+                        <outlet property="billAmount" destination="Mlt-gu-Q0u" id="yKd-RG-yLd"/>
+                        <outlet property="currencyBtn" destination="57f-hs-cPS" id="Gw7-eG-GoQ"/>
+                        <outlet property="splitAmount" destination="TM9-gK-Yfq" id="7Gw-Cb-s7A"/>
+                        <outlet property="splitAmountLabel" destination="GGU-CB-h5g" id="qPJ-cE-ZIC"/>
+                        <outlet property="splitLabel" destination="f4D-wQ-dpM" id="XuT-uH-6Us"/>
+                        <outlet property="subSplit" destination="cyY-lL-3PD" id="C83-87-KM7"/>
+                        <outlet property="tipAmount" destination="Jle-RK-yil" id="ArE-UQ-rr0"/>
+                        <outlet property="tipControl" destination="2is-L3-ASw" id="ZLS-dp-n9O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
