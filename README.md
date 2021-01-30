@@ -35,6 +35,6 @@ The code is not perfect and efficient coding practices may have not been used. T
 ![The GIF of the application](demo.gif)
 
 
-### Good day :blush
+### Good day :blush:
 
 
