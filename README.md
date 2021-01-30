@@ -16,7 +16,7 @@ The code is not perfect and efficient coding practices may have not been used. T
 - Can choose how much tip percentage the user is willing to give
 - Can split the bill
 
-### Improvements
+### Future Improvements
 - Design flow of the application
 - Implement an architecture
 - Redesign the User Interface, more user friednly and with good user experience
