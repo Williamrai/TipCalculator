@@ -11,6 +11,6 @@ With my limited knowledge in ios world, I created my first ios application. To c
 
 
 # DEMO
-!(demo.gif)
+![](demo.gif)
 
 
