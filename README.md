@@ -32,7 +32,7 @@ The code is not perfect and efficient coding practices may have not been used. T
 
 
 # DEMO
-
+![Application Walkthrough](demo.gif)
 
 
 ### Good day :blush:
