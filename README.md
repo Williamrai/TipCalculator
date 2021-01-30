@@ -31,7 +31,7 @@ The code is not perfect and efficient coding practices may have not been used. T
 - Making the input of user easy without having to enter dot, found the logic to that in the internet
 
 
-# DEMO
+# Walkthrough
 ![Application Walkthrough](demo.gif)
 
 
